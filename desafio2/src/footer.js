@@ -1,7 +1,7 @@
 function Footer () {
     return (
         <footer className="footer">
-            <h3>Footer</h3>
+            <h4>Desafio bootcamp Brainn.con&emsp;|&emsp; Elaborado por Dayanne Alcantara</h4>
         </footer>
     )
 }

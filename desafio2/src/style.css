@@ -3,10 +3,9 @@
 }
 
 .header{
-    overflow: hidden;
     display: flex;
     width: 100%;
-    justify-content:space-between;
+    justify-content:center;
     padding: 20px 80px;
     background-color: #0D0D0D;
     color: white;
@@ -15,13 +14,13 @@
 .menu {
     display: flex;
     width: 100%;
-    justify-content:center;
+    justify-content: space-between;
     background-color: #A68D85;
+    padding: 30px;
+   
+    
 }
 
-.button {
-    padding: 50px;
-}
 
 .primary {
     background-color: #BFBDBE;
@@ -35,9 +34,8 @@
     line-height: 25px;
     border-radius: 4px;
     margin-right: 8px;
-    cursor: pointer;
-    
-    
+    cursor: pointer;   
+  
 }
 
 .secudary{
@@ -64,14 +62,26 @@
 .sidebar {
     display: flex;
     justify-content: center;
-    width: 15%;
+    width: 20%;
     background-color: #D9A384;
    
-   
 }
+
+.links-sidebar li a {
+    color: black;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+
 .conteudo {
     background-color: #73534C;
-    width: 85%;
+    width: 80%;
     text-align: center;
 }
 
