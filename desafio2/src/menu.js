@@ -1,10 +1,12 @@
-
+import Button from "./button";
 
 function Content () {
     return (
         <div className='menu'>
-            <h2>Menu</h2>
-                  
+            <div> <Button kind="Conteúdo" />
+        <Button kind="Contatos" />  </div>
+         
+          
         </div>
 
    )

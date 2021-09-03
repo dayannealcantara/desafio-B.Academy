@@ -1,18 +1,24 @@
-import {links} from './app'
 
+function Sidebar({links, setTitle, setContent}) {
 
-function Sidebar () {
+   function handleClick(e,link){
+       e.preventDefault()
+     setTitle(link.title)
+     setContent(link.content)
+       
+   }
+
     return (
-        <div className='sidebar'>
-            <ul>
-                {links.map((item) => (
-                <li key= {item} >
-                    <a href = {item.title}> {item.title} </a>
+        <aside className='sidebar'>
+            <ul className='links-sidebar'>
+                {links.map((link) => (
+                <li key= {link.id} >
+                    <a  onClick={ (e) =>handleClick(e, link)} href={link.title}>{link.title}</a>
                 </li> 
-             ))}
+              ))}
 
             </ul>
-        </div>
+        </aside>
     )
 }
 
