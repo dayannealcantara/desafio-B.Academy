@@ -1,7 +1,7 @@
 function Title({ children }) {
   return (
     <header className="header">
-      <h1>Óleos essenciais</h1>   
+      <h1> A natureza a favor do bem-estar</h1>   
     </header>
   );
 }
