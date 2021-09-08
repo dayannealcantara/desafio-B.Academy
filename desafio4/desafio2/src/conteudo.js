@@ -1,4 +1,7 @@
 import Title from "./titulo";
+import lavanda from './imagens/lavanda.jpg'
+import hortela from './imagens/hortela.jpg'
+import alecrim from './imagens/alecrim.jpg'
 
 function Conteudo({ title, content}) {
   return (
@@ -18,6 +21,9 @@ function Conteudo({ title, content}) {
         <li className="beneficios">Fortalecimento das defesas do corpo;</li>
         <li className="beneficios">Opção natural na composição de cosméticos.</li>
       </ul>
+      <img src={lavanda} alt='óleo lavanda' />
+      <img src={hortela} alt='óleo hortela' />
+      <img src={alecrim} alt='óleo alecrim' />
       <Title size="3">{title}</Title>
          
       <Title size="4">{content}</Title>   

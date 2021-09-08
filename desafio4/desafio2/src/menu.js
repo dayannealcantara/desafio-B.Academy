@@ -1,12 +1,8 @@
-import Button from "./button";
 
 function Content () {
     return (
         <div className='menu'>
-            <div className='button'> <Button kind="#" />
-        <Button kind="#" />  </div>
-         
-          
+            <h2> A natureza a favor do  seu bem-estar</h2>                    
         </div>
 
    )

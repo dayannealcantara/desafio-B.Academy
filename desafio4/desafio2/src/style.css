@@ -2,14 +2,7 @@
     box-sizing: border-box;
 }
 
-.header{
-    display: flex;
-    width: 100%;
-    justify-content:center;
-    padding: 20px 80px;
-    background-color: #D8ABB1;
-    color: black;
- } 
+
      
 .menu {
     display: flex;
