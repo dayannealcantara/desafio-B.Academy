@@ -6,48 +6,12 @@
 
 .container-central {
     display: flex;
-    height: 700px;
+    height: 800px;
   
 }
 
-.sidebar {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    background-color: #D8ABB1; 
-}
 
-.links-sidebar li {
-    padding-top: 80px;
-}
 
-.links-sidebar li a {
-    color: black;
-    text-align:justify;
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 20px;
-  
-}
-
-.conteudo {
-    background-color: #F9E6E6;
-    width: 80%;
-    text-align: center;
-    padding: 20px;
-}
-
-.conteudo p {
-    text-align: justify;
-    padding: 0 20px;
-    line-height: 25px;
-}
-
-.beneficios {
-    text-align: justify;
-    line-height: 25px;
-}
- 
 
 .footer {
     display: flex;
