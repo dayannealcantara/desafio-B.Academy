@@ -2,43 +2,7 @@
     box-sizing: border-box;
 }
 
-
      
-.menu {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: #E0BCB7;
-    padding: 30px;    
-}
-.primary {
-    background-color: #BFBDBE;
-    color: black;
-    text-align: center;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-    margin-right: 8px;
-    cursor: pointer;   
-  
-}
-
-.secudary{
-    background-color: #BFBDBE;
-    color: black;
-    text-align: center;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-    margin-right: 8px;
-    cursor: pointer;
-}
 
 .container-central {
     display: flex;
