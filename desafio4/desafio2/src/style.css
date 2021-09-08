@@ -1,24 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-
-     
-
-.container-central {
-    display: flex;
-    height: 800px;
-  
-}
 
 
-
-
-.footer {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    background-color: #E0BCB7;
-    color: black; 
-}
 
 
