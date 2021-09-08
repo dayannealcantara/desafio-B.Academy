@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content:center;
+    padding: 20px 80px;
+    background-color: #D8ABB1;
+    color: black;
+ } 
+     
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #E0BCB7;
+    padding: 30px;    
+}
+.primary {
+    background-color: #BFBDBE;
+    color: black;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;   
+  
+}
+
+.secudary{
+    background-color: #BFBDBE;
+    color: black;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.container-central {
+    display: flex;
+    height: 700px;
+  
+}
+
+.sidebar {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    background-color: #D8ABB1; 
+}
+
+.links-sidebar li {
+    padding-top: 80px;
+}
+
+.links-sidebar li a {
+    color: black;
+    text-align:justify;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+  
+}
+
+.conteudo {
+    background-color: #F9E6E6;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+}
+
+.conteudo p {
+    text-align: justify;
+    padding: 0 20px;
+    line-height: 25px;
+}
+
+.beneficios {
+    text-align: justify;
+    line-height: 25px;
+}
+ 
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #E0BCB7;
+    color: black; 
+}
+
+
