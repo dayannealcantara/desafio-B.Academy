@@ -16,12 +16,6 @@ function Footer() {
           </Li>
 
           <Li>
-            <A href="https://www.instagram.com/dayanneal/">
-              <Img src={facebook} alt="instagram" />
-            </A>
-          </Li>
-
-          <Li>
             <A href="https://github.com/dayannealcantara">
               <Img src={github} alt="github" />
             </A>
@@ -34,7 +28,7 @@ function Footer() {
           </Li>
         </Ul>
       </nav>
-     
+
       <h4>
         Desafio bootcamp Brainn.com&emsp;|&emsp; Elaborado por Dayanne Alcantara
       </h4>
@@ -65,13 +59,11 @@ const Li = styled.li`
 const Img = styled.img`
   width: 100%;
   max-width: 20px;
-  
 `;
 
 const A = styled.a`
   font-weight: bold;
   text-decoration: none;
-  
 `;
 
 export default Footer;
