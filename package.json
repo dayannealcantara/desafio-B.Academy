@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src --ext ts,tsx",
+    "lint": "eslint src --ext ts,tsx --no-eslintrc --config .eslintrc-default.json",
     "lint:fix": "yarn lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
     "prepare": "husky install"
@@ -21,6 +21,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "babel-eslint": "10.1.0",
+    "caniuse-lite": "^1.0.30001256",
     "eslint-config-standard": "16.0.3",
     "eslint-config-standard-jsx": "10.0.0",
     "eslint-config-standard-react": "11.0.1",
