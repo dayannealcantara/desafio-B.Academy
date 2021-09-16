@@ -4,7 +4,7 @@ import { theme } from 'resources/theme'
 
 import 'normalize.css'
 
-function Root () {
+export function Root () {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
@@ -27,5 +27,3 @@ const GlobalStyle = createGlobalStyle`
   }
 
 `
-
-export { Root }
