@@ -6,5 +6,5 @@ ReactDOM.render(
   <StrictMode>
     <Root />
   </StrictMode>,
-  document.getElementById('root'),
+  document.querySelector('[data-js="app"]'),
 )
