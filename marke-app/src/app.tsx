@@ -1,19 +1,17 @@
-import { Conteudo } from './conteudo'
-import { Sidebar } from './sidebar'
+import styled from 'styled-components/macro'
+import { Sidebar } from 'sidebar'
+import { Content } from 'content'
 
-function App () {
+export function App () {
   return (
-    <>
-      <div>
-        <Sidebar />
-        <Conteudo />
-      </div>
-    </>
+    <Main>
+      <Sidebar />
+      <Content />
+    </Main>
   )
 }
 
-/* background: ${({ theme }) => theme.colors.black};;
-  color: ${({ theme }) => theme.colors.primary};
-*/
-
-export { App }
+const Main = styled.main`
+  display: flex;
+  height: 100vh;
+`
