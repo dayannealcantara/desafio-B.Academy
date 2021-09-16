@@ -1,6 +1,12 @@
+import { useState, ChangeEvent } from 'react'
 import * as S from './content-style'
 
 function Content () {
+  const [content, setContent] = useState(' ')
+
+  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    setContent(e.target.value)
+  }
   return (
     <S.ContentWrapper>
       <S.Header>
@@ -10,11 +16,12 @@ function Content () {
       <S.ContentSection>
         <S.Textarea
           placeholder='Digite aqui seu markdown'
+          value={content}
+          onChange={handleChange}
         />
 
         <S.Article>
-          <h1>Bootcamp Brainn Co.</h1>
-          <p>Lorem ipsum dolor sit amet simet</p>
+          {content}
         </S.Article>
       </S.ContentSection>
     </S.ContentWrapper>
