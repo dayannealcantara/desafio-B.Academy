@@ -2,7 +2,7 @@ import { useState, ChangeEvent } from 'react'
 import * as S from './content-style'
 import marked from 'marked'
 
-import 'highlight.js/styles.github.css'
+import 'highlight.js/styles/github.css'
 
 import('highlight.js').then(hljs => {
   const h = hljs.default
@@ -16,7 +16,7 @@ import('highlight.js').then(hljs => {
   })
 })
 
-function Content () {
+export function Content () {
   const [content, setContent] = useState(' ')
 
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -41,5 +41,3 @@ function Content () {
     </S.ContentWrapper>
   )
 }
-
-export { Content }

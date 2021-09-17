@@ -35,7 +35,7 @@ export function Sidebar () {
         <span>Arquivos</span>
       </S.H2>
 
-      <S.Button>
+      <S.Button onClick={files}>
         <icon.PlusDark /> Adicionar arquivo
       </S.Button>
 
