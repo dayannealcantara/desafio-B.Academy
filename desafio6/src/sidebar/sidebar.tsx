@@ -1,24 +1,12 @@
+import { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import { File } from 'resources/files/types'
 import markeeLogo from './markee-logo.png'
 import * as icon from 'ui/icons'
 import * as S from './sidebar-styles'
 
-const files: File[] = [
-  {
-    id: '0',
-    name: 'README.md',
-    content: 'Conteúdo do README',
-    active: false,
-    status: 'saved',
-  },
-  {
-    id: '1',
-    name: 'CONTRIBUTING.md',
-    content: 'Conteúdo do Contributing',
-    active: true,
-    status: 'editing',
-  },
-]
+
+
 
 export function Sidebar () {
   return (
