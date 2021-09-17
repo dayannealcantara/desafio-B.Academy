@@ -3,7 +3,7 @@ import { FileActiveUrl } from 'ui/icons'
 
 const contentPadding = '24px'
 export const ContentWrapper = styled.div`${({ theme }) => css`
-  background: ${theme.colors.White};
+  background: ${theme.colors.white};
   flex-grow: 5;
   flex-wrap: wrap;
   padding: ${contentPadding};

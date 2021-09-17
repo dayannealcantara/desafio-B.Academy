@@ -4,7 +4,7 @@ declare module 'styled-components' {
       black: string
       lightBlack: string
       gray: string
-      White: string
+      white: string
       primary: string
       primaryDark: string
     }

@@ -15,7 +15,7 @@ export const H1 = styled.h1`
 `
 
 export const H2 = styled.h2`${({ theme }) => css`
-  color: ${theme.colors.White};
+  color: ${theme.colors.white};
   font-size: 1.6rem;
   position: relative;
   padding-left: 20px;
@@ -119,7 +119,7 @@ export const FileItemLink = styled.a<FileItemLinkProps>`${({ theme, active }) =>
   background: url("${active ? icon.FileActiveUrl : icon.FileUrl}") 10px calc(50% - 2px) no-repeat;
   align-items: center;
   border-radius: 4px;
-  color: ${theme.colors.White};
+  color: ${theme.colors.white};
   display: flex;
   font-size: 1.6rem;
   margin-bottom: 4px;
