@@ -4,8 +4,6 @@ import { Sidebar } from 'sidebar'
 import { Content } from 'content'
 import { File } from 'resources/files/types'
 import { v4 as uuidv4 } from 'uuid'
-import { updateSourceFile } from 'typescript'
-import { clearTimeout } from 'timers'
 
 export function App () {
   const inputRef = useRef<HTMLInputElement>(null)
@@ -17,7 +15,7 @@ export function App () {
     function updateStatus () {
       const file = files.find(file => file.active === true)
 
-      if (!file || file.status ! == 'editing') {
+      if (!file || file.status !== 'editing') {
         return
       }
 
@@ -50,6 +48,22 @@ export function App () {
     return () => clearTimeout(timer)
   }, [files])
 
+  const handleCreateNewFile = () => {
+    inputRef.current?.focus()
+    setFiles(files => files
+      .map(file => ({
+        ...file,
+        active: false,
+      }))
+      .concat({
+        id: uuidv4(),
+        name: 'sem titulo',
+        content: '',
+        active: true,
+        status: 'saved',
+      }))
+  }
+
   const handleUpdateFileName = (id: string) => (e:ChangeEvent<HTMLInputElement>) => {
     setFiles(files => files.map(file => {
       if (file.id === id) {
@@ -64,7 +78,7 @@ export function App () {
   }
 
   const handleUpdateFileContent = (id: string) => (e:ChangeEvent<HTMLTextAreaElement>) => {
-    setFiles(file => files.map(file => {
+    setFiles(files => files.map(file => {
       if (file.id === id) {
         return {
           ...file,
@@ -80,16 +94,30 @@ export function App () {
     e.preventDefault()
     inputRef.current?.focus()
 
-    setFiles(file => files.map(file => ({
+    setFiles(files => files.map(file => ({
       ...file,
       active: file.id === id,
     })))
   }
 
+  const handleRemoveFile = (id: string) => {
+    setFiles(files => files.filter(file => file.id !== id))
+  }
+
   return (
     <Main>
-      <Sidebar />
-      <Content />
+      <Sidebar
+        files={files}
+        onNewFile={handleCreateNewFile}
+        onSelectFile={handleSelectFile}
+        onRemoveFile={handleRemoveFile}
+      />
+      <Content
+        inputRef={inputRef}
+        file={files.find(file => file.active === true)}
+        onUpdateFileName={handleUpdateFileName}
+        onUpdateFileContent={handleUpdateFileContent}
+      />
     </Main>
   )
 }

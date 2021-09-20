@@ -1,6 +1,7 @@
-import { useState, ChangeEvent } from 'react'
-import * as S from './content-style'
+import { ChangeEvent, RefObject } from 'react'
 import marked from 'marked'
+import { File } from 'resources/files/types'
+import * as S from './content-style'
 
 import 'highlight.js/styles/github.css'
 
@@ -18,26 +19,41 @@ import('highlight.js').then(hljs => {
   })
 })
 
-export function Content () {
-  const [content, setContent] = useState('')
+type ContentProps = {
+  inputRef: RefObject<HTMLInputElement>
+  file?: File
+  onUpdateFileName: (id: string) => (e: ChangeEvent<HTMLInputElement>) => void
+  onUpdateFileContent: (id: string) => (e: ChangeEvent<HTMLTextAreaElement>) => void
+}
 
-  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setContent(e.target.value)
+export function Content ({
+  inputRef,
+  file,
+  onUpdateFileName,
+  onUpdateFileContent,
+}: ContentProps) {
+  if (!file) {
+    return null
   }
+
   return (
     <S.ContentWrapper>
       <S.Header>
-        <S.Input defaultValue='Sem título' />
+        <S.Input
+          ref={inputRef}
+          value={file.name}
+          onChange={onUpdateFileName(file.id)}
+          autoFocus
+        />
       </S.Header>
-
       <S.ContentSection>
         <S.Textarea
           placeholder='Digite aqui seu markdown'
-          value={content}
-          onChange={handleChange}
+          value={file.content}
+          onChange={onUpdateFileContent(file.id)}
         />
 
-        <S.Article dangerouslySetInnerHTML={{ __html: marked(content) }} />
+        <S.Article dangerouslySetInnerHTML={{ __html: marked(file.content) }} />
 
       </S.ContentSection>
     </S.ContentWrapper>
