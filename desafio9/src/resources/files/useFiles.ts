@@ -52,6 +52,13 @@ export function useFiles () {
   }, [files])
 
   useEffect(() => {
+    const selectedFile = files.find(file => file.active === true)
+    if (selectedFile) {
+      window.history.replaceState(null, '', `/file/${selectedFile.id}`)
+    }
+  }, [files])
+
+  useEffect(() => {
     async function getFromStrorage () {
       const files = await localforage.getItem<File[]>('markee')
       console.log(files)
